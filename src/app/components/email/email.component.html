@@ -20,10 +20,13 @@
           </mat-form-field>
 
           <div class="text-center">
-            <button type="submit" mat-raised-button color="primary" >Send</button>
+
+            <mat-spinner *ngIf="flag" style="margin: auto;"></mat-spinner>
+
+            <button [disabled]="flag" type="submit" mat-raised-button color="primary" >Send</button>
           <button type="reset" mat-raised-button color="accent" >Reset</button>
           </div>
         </form>
-        {{data | json}}
+        <!-- {{data | json}} -->
     </div>
 </div>
